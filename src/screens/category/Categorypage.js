@@ -1,12 +1,14 @@
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, ScrollView} from "react-native";
 import React from "react";
 import Header from "@/src/components/Header";
 import Categorieslogo from "@/src/components/Categorieslogo";
 import Banner from "@/src/components/Banner";
 import Section from "@/src/components/Section";
 import Product from "@/src/components/Product";
+import { useNavigation } from "@react-navigation/native";
 
 const Categorypage = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView>
@@ -19,8 +21,10 @@ const Categorypage = () => {
         />
         <Section
           toptext={"The Blouse Diaries"}
+          onPress={() => navigation.navigate("Plppage")}
           bottext={"Blouses for every reason and season"}
           img={require("../../../assets/images/Banner7.png")}
+          
         />
         <Product />
         <Section
@@ -42,4 +46,3 @@ const Categorypage = () => {
 
 export default Categorypage;
 
-const styles = StyleSheet.create({});

@@ -1,16 +1,18 @@
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import Header from "../../src/components/Header";
 import Categorieslogo from "../../src/components/Categorieslogo";
 import Product from "../../src/components/Product";
 import Section from "../../src/components/Section";
 import Banner from "../components/Banner";
+import { useNavigation } from "@react-navigation/native";
 
 const Homescreen = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Header text={"Tjori"} />
+        <Header text={"Tjori"}/>
         <Categorieslogo />
         <Banner
           img={require("../../assets/images/Banner1.png")}
@@ -26,10 +28,12 @@ const Homescreen = () => {
           bottext={"An amalgamation of modal silk and exquisite craftsmanship"}
         />
         <Section
+          onPress={() => navigation.navigate("Plppage")}
           toptext={"Maharashtrian Reglia"}
           bottext={"Traditional Marathi Jewelry"}
           img={require("../../assets/images/Banner3.png")}
         />
+
         <Product />
         <Section
           toptext={"The Experimental"}

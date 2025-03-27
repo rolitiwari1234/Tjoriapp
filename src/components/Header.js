@@ -2,8 +2,7 @@ import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Svg, { Path } from "react-native-svg";
 
-
-const Header = ({props,text}) => {
+const Header = ({ props, text }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View></View>
@@ -23,7 +22,6 @@ const Header = ({props,text}) => {
             clipRule="evenodd"
           />
         </Svg>
-        
       </View>
     </SafeAreaView>
   );
@@ -33,11 +31,12 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
+    marginHorizontal: 10,
     backgroundColor: "#25211E",
     height: 62,
     justifyContent: "space-between",
     alignItems: "center",
-    flexDirection: "row",
+   flexDirection: "row",
   },
   text: {
     color: "#C0B394",

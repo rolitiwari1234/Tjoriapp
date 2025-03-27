@@ -26,6 +26,24 @@
         image:require('../../assets/images/logo4.png'),
         title:"Jewelry"
     },
+    {
+        id:"6",
+       image:require('../../assets/images/logo03.png'),
+        title:"Wellness"
+    },
+
+    {
+        id:"7",
+       image:require('../../assets/images/logo3.png'),
+        title:"Footwear"
+    },
+
+    {
+        id:"8",
+        image:require('../../assets/images/logo4.png'),
+        title:"Jewelry"
+    },
+   
    
 ]
 

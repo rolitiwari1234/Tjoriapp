@@ -8,15 +8,17 @@ import {
   View,
 } from "react-native";
 import React from "react";
-import Logodata from "@/src/utils/Logodata";
+import Logodata from '@/src/utils/Logodata'
 import { useNavigation } from "@react-navigation/native";
 
 const Categorieslogo = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Text>Categoriesscreen</Text> */}
-      <TouchableOpacity onPress={()=>navigation.navigate('Categorypage')}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Categorypage")}
+        activeOpacity={0.9}
+      >
         <FlatList
           horizontal
           showsHorizontalScrollIndicator={false}

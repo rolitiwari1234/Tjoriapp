@@ -1,20 +1,11 @@
-import {
-  Dimensions,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 
-const { width } = Dimensions.get("window");
-
-const Section = ({ toptext, bottext, img }) => {
+const Section = ({ toptext, bottext, img, onPress }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-        <Text style={styles.toptext}>{toptext}</Text>
+      <TouchableOpacity onPress={onPress} activeOpacity={0.9}>
+        <Text style={styles.toptext}>{toptext} </Text>
         <Text style={styles.bottext}>{bottext}</Text>
       </TouchableOpacity>
 
@@ -35,6 +26,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
   },
   toptext: {
     fontSize: 28,
@@ -44,6 +36,7 @@ const styles = StyleSheet.create({
   bottext: {
     color: "#2B2B2B",
     fontSize: 14,
+    textAlign: "center",
   },
   imgview: {
     width: "100%",
